@@ -101,11 +101,13 @@ python main.py
 - 로그 기록 기능 추가 (성공/실패 분리)
 - CSV 정렬/정규화 옵션 추가
 
+---
+
 ## 📝 진행 사항
 
 - Metadata 수집(TMDB, NAVER 검색, Gemini) 병렬화
 - Metadata 수집 병렬화 후 크롤링 시간 약 90분에서 약 19분으로 감소
-
+- 
 - 모듈화 진행(이전 크롤링 코드 : https://github.com/KongKongeee/IFITV-Crawling.git)
 - max_workers 동적 조절(이미 main.py에서 설정된 값을 Crawler 클래스에서 받아 사용할 수 있도록 구조 수정)
 - 채널마다 순차적으로 처리하였으나 채널 단위도 ThreadPoolExecutor로 묶어 2단 병렬화 진행
