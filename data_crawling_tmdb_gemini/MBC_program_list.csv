@@ -1,0 +1,26 @@
+﻿channel,airtime,title,genre,subgenre,runtime,description,thumbnail,age_rating,cast
+MBC[11],00:30:00,MBC뉴스 25,예능,교양,20,"MBC에서 방송되는 심층 시사 보도 프로그램으로, 사회, 경제, 문화 등 다양한 분야의 이슈를 다룹니다.",정보 없음,15세 이상,"손령, 정슬기"
+MBC[11],00:50:00,MBC네트워크특선,보도,보도,250,MBC네트워크특선,정보 없음,전체 이용가,"손령, 정슬기"
+MBC[11],05:00:00,오늘N,보도,보도,60,오늘N,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F65%2F96%2F70%2F57_659670_poster_image_1506388417674.jpg,전체 이용가,"손령, 정슬기"
+MBC[11],06:00:00,MBC뉴스투데이,보도,보도,25,MBC뉴스투데이,정보 없음,전체 이용가,"손령, 정슬기"
+MBC[11],06:25:00,MBC뉴스투데이,보도,보도,85,MBC뉴스투데이,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F65%2F96%2F70%2F57_659670_poster_image_1506388417674.jpg,전체 이용가,"손령, 정슬기"
+MBC[11],07:50:00,생방송 오늘 아침,보도,보도,60,생방송 오늘 아침,정보 없음,전체 이용가,"서인, 박연경, 김한석"
+MBC[11],08:50:00,태양을 삼킨 여자,드라마,정보 없음,40,"피해자가 가해자로 둔갑한 세상, 하나뿐인 딸의 이름으로 재벌가에 맞선 한 여자의 처절한 복수극",https://image.tmdb.org/t/p/w500/clYtDErvK8UIeLP2vXxok3TVJKd.jpg,15세 이상,"장신영, 서하준, 윤아정, 오창석, 전노민"
+MBC[11],09:30:00,930 MBC뉴스,예능,교양,15,MBC에서 방송되는 아침 종합 뉴스 프로그램.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240305_189%2F17095975933742KPGb_JPEG%2F57_659900_poster_image_1709597593349.jpg,전체 이용가,"서인, 박연경, 김한석"
+MBC[11],09:45:00,기분 좋은 날,예능,교양,60,화려함 뒤에 숨겨진 스타들의 진솔한 이야기와 스타들의 특별한 체험을 만날 수 있는 연예정보 프로그램,https://image.tmdb.org/t/p/w500/aA8BFSC9NWqjSEkxg5TBxFTPFQn.jpg,15세 이상,"서인, 박연경, 김한석"
+MBC[11],10:45:00,헬로키즈TV생물도감2,애니,교육,30,"아이들이 좋아하는 캐릭터들과 함께 생물에 대해 배우는 교육 프로그램입니다. 다양한 생물들을 소개하고, 쉽고 재미있는 설명과 생생한 영상을 통해 아이들의 이해를 돕습니다.",정보 없음,전체 이용가,"서인, 박연경, 김한석"
+MBC[11],11:15:00,뽀뽀뽀 좋아좋아,예능,유아,30,"아이들을 위한 교육, 놀이, 동요, 율동 등을 제공하는 프로그램입니다.",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240625_57%2F1719275236150LIQEr_JPEG%2F57_34330733_poster_image_1719275236142.jpg,전체 이용가,정보 없음
+MBC[11],11:45:00,시크릿 쥬쥬 별의 보석 2,애니,키즈,15,시크릿 쥬쥬 별의 보석 2,,전체 이용가,정보 없음
+MBC[11],12:00:00,12 MBC뉴스,보도,보도,25,12 MBC뉴스,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240625_57%2F1719275236150LIQEr_JPEG%2F57_34330733_poster_image_1719275236142.jpg,전체 이용가,정보 없음
+MBC[11],12:25:00,MBC네트워크특선,보도,보도,60,MBC네트워크특선,정보 없음,전체 이용가,"손령, 정슬기"
+MBC[11],13:25:00,키즈 펫 도감,교육,유아,30,"귀여운 동물들을 만나보고, 그들의 특징과 습성을 배우는 유익한 프로그램입니다.",https://example.com/kids_pet_dogam.jpg,전체 이용가,정보 없음
+MBC[11],13:55:00,2시 뉴스 외전,보도,보도,120,2시 뉴스 외전,정보 없음,전체 이용가,정보 없음
+MBC[11],15:55:00,기분 좋은 날,예능,교양,60,화려함 뒤에 숨겨진 스타들의 진솔한 이야기와 스타들의 특별한 체험을 만날 수 있는 연예정보 프로그램,https://image.tmdb.org/t/p/w500/aA8BFSC9NWqjSEkxg5TBxFTPFQn.jpg,15세 이상,"서인, 박연경, 김한석"
+MBC[11],16:55:00,5시 뉴스와 경제,보도,보도,15,5시 뉴스와 경제,정보 없음,전체 이용가,정보 없음
+MBC[11],17:10:00,엄마를 부탁해,보도,보도,55,엄마를 부탁해,https://image.tmdb.org/t/p/w500/A94uZrW7Rvg5e5m033oGHS9MWJ3.jpg,전체 이용가,"송은이, 김정현"
+MBC[11],18:05:00,오늘N,보도,보도,60,오늘N,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F65%2F96%2F70%2F57_659670_poster_image_1506388417674.jpg,전체 이용가,"손령, 정슬기"
+MBC[11],19:05:00,태양을 삼킨 여자,드라마,정보 없음,35,"피해자가 가해자로 둔갑한 세상, 하나뿐인 딸의 이름으로 재벌가에 맞선 한 여자의 처절한 복수극",https://image.tmdb.org/t/p/w500/clYtDErvK8UIeLP2vXxok3TVJKd.jpg,15세 이상,"장신영, 서하준, 윤아정, 오창석, 전노민"
+MBC[11],19:40:00,MBC뉴스데스크,보도,보도,80,MBC뉴스데스크,https://image.tmdb.org/t/p/w500/9XFgQFSCEF8U1W19M3uX8VgxQNg.jpg,전체 이용가,"송은이, 김정현"
+MBC[11],21:00:00,100분토론,예능,교양,80,"사회, 정치, 문화 등 다양한 분야의 이슈에 대해 전문가, 패널, 시청자들이 함께 토론하는 프로그램입니다.",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250519_201%2F1747613505459yzKCJ_JPEG%2Fbfea8e19d91830b54d0dc228e742cf5f.jpg,12세 이상,"송은이, 김정현"
+MBC[11],22:20:00,PD수첩,예능,교양,60,"""시대의 정직한 목격자""가 되기 위한 성역 없는 취재를 지향하는 심층 탐사 보도 프로그램",정보 없음,15세 이상,한학수
+MBC[11],23:20:00,태어난 김에 세계일주 4,예능,여행,60,"기안84, 빠니보틀, 덱스, 이시언이 출연하여 펼치는 리얼 여행 버라이어티",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250519_201%2F1747613505459yzKCJ_JPEG%2Fbfea8e19d91830b54d0dc228e742cf5f.jpg,15세 이상,"송은이, 김정현, 기안84, 빠니보틀, 덱스, 이시언"
