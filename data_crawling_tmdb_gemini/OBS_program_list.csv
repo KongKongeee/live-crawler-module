@@ -1,27 +1,29 @@
 ﻿channel,airtime,title,genre,subgenre,runtime,description,thumbnail,age_rating,cast
-OBS[26],00:00:00,리얼도전스토리 하이킥,예능,교양,30,다양한 분야의 도전을 통해 감동과 웃음을 선사하는 프로그램.,정보 없음,전체 이용가,정보 없음
-OBS[26],00:30:00,오늘의 월드 뉴스,예능,교양,30,세계 각국의 소식을 예능적인 방식으로 전달하는 프로그램입니다.,정보 없음,전체 이용가,정보 없음
-OBS[26],01:00:00,주식학교,예능,교육예능,300,주식 투자에 대한 기초 지식과 실전 투자 노하우를 배우는 예능 프로그램입니다.,정보 없음,12세 이상,정보 없음
-OBS[26],06:00:00,세계의 다큐멘터리,예능,교양,60,"세계 각지의 흥미로운 이야기를 담은 다큐멘터리 프로그램입니다. 자연, 역사, 문화 등 다양한 분야를 탐구하며, 시청자들에게 지식과 감동을 선사합니다.",정보 없음,전체 이용가,정보 없음
-OBS[26],07:00:00,휴먼다큐 시장 사람들,보도,보도,30,휴먼다큐 시장 사람들,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20220829_175%2F1661762041884JPppt_JPEG%2F57_669728_poster_image_1661762041833.jpg,전체 이용가,정보 없음
-OBS[26],07:30:00,옴니극장,예능,교양,60,각 분야의 전문가들이 출연하여 다양한 주제에 대해 이야기를 나누는 교양 프로그램입니다.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F37%2F58%2F29%2F57_14375829_poster_image_1595053956904.png,전체 이용가,정보 없음
-OBS[26],08:30:00,역전의 부자농부,보도,보도,60,역전의 부자농부,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F62%2F55%2F34%2F57_2625534_poster_image_1479108787131.jpg,전체 이용가,정보 없음
-OBS[26],09:30:00,극한 직업,예능,교양,50,극한의 직업에 종사하는 사람들의 삶을 밀착 촬영하여 생생하게 보여주는 프로그램,https://image.tmdb.org/t/p/w500/vni9Hi9UN1QL7YULqz6esfJR5oZ.jpg,ALL,한학수
-OBS[26],10:20:00,글로벌 아빠 찾아 삼만리,보도,보도,50,글로벌 아빠 찾아 삼만리,https://image.tmdb.org/t/p/w500/z6ovjJYmIerbwF4PvTKyllPM77C.jpg,전체 이용가,정보 없음
-OBS[26],11:10:00,BBC특별기획,예능,교양,60,"BBC에서 제작한 특별 기획 프로그램으로, 다양한 주제에 대한 심도 있는 이야기를 다룹니다.",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F37%2F58%2F29%2F57_14375829_poster_image_1595053956904.png,12세 이상,정보 없음
-OBS[26],12:10:00,전기현의 씨네뮤직,예능,음악예능,60,음악과 영화를 사랑하는 전기현의 씨네뮤직! 영화음악과 관련된 다양한 이야기와 비하인드 스토리를 들어보세요.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F0%2F0%2F192%2F192909.jpg,전체 이용가,정보 없음
-OBS[26],13:10:00,눈에 띄는 그녀들,보도,보도,30,눈에 띄는 그녀들,https://image.tmdb.org/t/p/w500/kcY6fh1DIgzyBcH0O4YHTWQU78j.jpg,전체 이용가,정보 없음
-OBS[26],13:40:00,꾸러기TV,예능,교양,50,어린이들을 위한 유익하고 재미있는 교양 프로그램입니다. 다양한 분야의 지식을 쉽고 재미있게 전달합니다.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250311_207%2F1741659368095dOstC_JPEG%2Fae1d2e48d2121a4d9a948ee57552cf5a.jpg,전체 이용가,정보 없음
-OBS[26],14:30:00,세계의 다큐멘터리,예능,교양,60,"세계 각지의 흥미로운 이야기를 담은 다큐멘터리 프로그램입니다. 자연, 역사, 문화 등 다양한 분야를 탐구하며, 시청자들에게 지식과 감동을 선사합니다.",정보 없음,전체 이용가,정보 없음
-OBS[26],15:30:00,OBS뉴스,보도,보도,60,OBS뉴스,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F0%2F0%2F192%2F192909.jpg,전체 이용가,정보 없음
-OBS[26],16:30:00,생방송 건강콜센터,보도,보도,60,생방송 건강콜센터,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20220725_35%2F1658737563893SG1rX_JPEG%2F57_662661_poster_image_1658737563882.jpg,전체 이용가,"으라차차 전국탐험대 2, 대배틀 The Contender, 얼짱TV, 어메이징 특종탐험대2, 주식남녀"
-OBS[26],17:30:00,OBS뉴스경인 530,보도,보도,20,OBS뉴스경인 530,정보 없음,전체 이용가,"으라차차 전국탐험대 2, 대배틀 The Contender, 얼짱TV, 어메이징 특종탐험대2, 주식남녀"
-OBS[26],17:50:00,극한 직업,예능,교양,50,극한의 직업에 종사하는 사람들의 삶을 밀착 촬영하여 생생하게 보여주는 프로그램,https://image.tmdb.org/t/p/w500/vni9Hi9UN1QL7YULqz6esfJR5oZ.jpg,ALL,한학수
-OBS[26],18:40:00,글로벌 아빠 찾아 삼만리,보도,보도,50,글로벌 아빠 찾아 삼만리,https://image.tmdb.org/t/p/w500/z6ovjJYmIerbwF4PvTKyllPM77C.jpg,전체 이용가,정보 없음
-OBS[26],19:30:00,OBS뉴스 730,예능,교양,40,OBS의 다양한 프로그램을 소개하는 프로그램입니다.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20231128_172%2F1701137222809W7AUq_JPEG%2F57_poster_image_1701137222791.jpg,전체 이용가,"으라차차 전국탐험대 2, 대배틀 The Contender, 얼짱TV, 어메이징 특종탐험대2, 주식남녀"
-OBS[26],20:10:00,독특한 연예 뉴스,예능,버라이어티,20,연예계의 다양한 소식을 전달하는 프로그램입니다.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20231128_9%2F1701137919640C1nsW_JPEG%2F57_poster_image_1701137919624.jpg,12세 이상,"으라차차 전국탐험대 2, 대배틀 The Contender, 얼짱TV, 어메이징 특종탐험대2, 주식남녀"
-OBS[26],20:30:00,오늘의 월드 뉴스,예능,교양,30,세계 각국의 소식을 예능적인 방식으로 전달하는 프로그램입니다.,정보 없음,전체 이용가,정보 없음
-OBS[26],21:00:00,호모 루덴스 놀이하는 인간,보도,보도,60,호모 루덴스 놀이하는 인간,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240124_152%2F17060588111714V7kP_JPEG%2F03bd13599f64cf71b9a8a734dc8b5bdf.jpg,전체 이용가,정보 없음
-OBS[26],22:00:00,OBS뉴스10 인천경기,보도,보도,30,OBS뉴스10 인천경기,정보 없음,전체 이용가,"엄홍길, 이승윤, 오세진, 강재준, 윤형빈"
-OBS[26],22:30:00,명물인생,보도,보도,30,명물인생,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20241202_45%2F1733110221744HWrbs_JPEG%2F57_35994451_poster_image_1733110221738.jpg,전체 이용가,"엄홍길, 이승윤, 오세진, 강재준, 윤형빈"
-OBS[26],23:00:00,엄홍길의 산악버스,예능,여행,60,엄홍길 대장과 출연진들이 산악 버스를 타고 여행하며 펼쳐지는 에피소드를 담은 프로그램,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20210430_108%2F1619762443150nPTSa_PNG%2F9f4ed1311244dcd8652b62b4030c7bbf.png,전체 이용가,"엄홍길, 이승윤, 오세진, 강재준, 윤형빈"
+OBS[26],00:10:00,생명탐사 월드 내비게이터,보도,보도,20,생명탐사 월드 내비게이터,,전체 이용가,정보 없음
+OBS[26],00:30:00,오늘의 월드 뉴스,보도,보도,30,오늘의 월드 뉴스,,전체 이용가,정보 없음
+OBS[26],01:00:00,명물인생,보도,보도,30,명물인생,,전체 이용가,정보 없음
+OBS[26],01:30:00,아카이브 다큐,보도,보도,270,아카이브 다큐,,전체 이용가,정보 없음
+OBS[26],06:00:00,옴니극장,보도,보도,60,옴니극장,,전체 이용가,정보 없음
+OBS[26],07:00:00,휴먼다큐 시장 사람들,보도,보도,30,휴먼다큐 시장 사람들,,전체 이용가,정보 없음
+OBS[26],07:30:00,생명탐사 월드 내비게이터,보도,보도,20,생명탐사 월드 내비게이터,,전체 이용가,정보 없음
+OBS[26],07:50:00,세계테마기행,예능,"여행, 다큐멘터리",40,"단순한 여행 정보 프로그램에서 벗어나, 자유로운 배낭여행자만이 느낄 수 있는 살아있는 체험기를 전하는 다큐멘터리 프로그램",https://image.tmdb.org/t/p/w500/pHC70ke34d0pEOdhcx8lnWhRtqk.jpg,전체 이용가,정보 없음
+OBS[26],08:30:00,미디어공감 좋은TV,보도,보도,60,미디어공감 좋은TV,,전체 이용가,정보 없음
+OBS[26],09:30:00,극한 직업,보도,보도,50,극한 직업,,전체 이용가,정보 없음
+OBS[26],10:20:00,글로벌 아빠 찾아 삼만리,보도,보도,50,글로벌 아빠 찾아 삼만리,,전체 이용가,정보 없음
+OBS[26],11:10:00,생방송 행복한 재테크,보도,보도,60,생방송 행복한 재테크,,전체 이용가,정보 없음
+OBS[26],12:10:00,OBS시청자채널 꿈꾸는U,보도,보도,40,OBS시청자채널 꿈꾸는U,,전체 이용가,정보 없음
+OBS[26],12:50:00,신계숙의 맛터사이클 다이어리,보도,보도,50,신계숙의 맛터사이클 다이어리,,전체 이용가,정보 없음
+OBS[26],13:40:00,꾸러기TV,예능,,50,아이들을 위한 재미있는 TV 프로그램입니다. 다양한 이야기와 볼거리를 제공합니다.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20220725_35%2F1658737563893SG1rX_JPEG%2F57_662661_poster_image_1658737563882.jpg,전체 이용가,"2015 슈퍼모델 선발대회, 으라차차 전국탐험대 2, 아웃도어 쌩쑈! 헐~ 대박, 접속 2014, 액숀무비"
+OBS[26],14:30:00,세계의 다큐멘터리,보도,보도,60,세계의 다큐멘터리,,전체 이용가,정보 없음
+OBS[26],15:30:00,OBS뉴스,보도,보도,60,OBS뉴스,,전체 이용가,정보 없음
+OBS[26],16:30:00,생방송 메디컬센터,보도,보도,60,생방송 메디컬센터,,전체 이용가,정보 없음
+OBS[26],17:30:00,OBS뉴스경인 530,보도,보도,20,OBS뉴스경인 530,,전체 이용가,정보 없음
+OBS[26],17:50:00,극한 직업,보도,보도,50,극한 직업,,전체 이용가,정보 없음
+OBS[26],18:40:00,OBS매거진 톡톡,보도,보도,50,OBS매거진 톡톡,,전체 이용가,정보 없음
+OBS[26],19:30:00,OBS뉴스 730,보도,보도,40,OBS뉴스 730,,전체 이용가,정보 없음
+OBS[26],20:10:00,독특한 연예 뉴스,예능,버라이어티,20,연예계 소식과 트렌드를 다루는 예능 프로그램.,정보 없음,12세 이상,"2015 슈퍼모델 선발대회, 으라차차 전국탐험대 2, 아웃도어 쌩쑈! 헐~ 대박, 접속 2014, 액숀무비"
+OBS[26],20:30:00,오늘의 월드 뉴스,보도,보도,30,오늘의 월드 뉴스,,전체 이용가,정보 없음
+OBS[26],21:00:00,태군노래자랑 2,예능,음악예능,60,태군이 진행하는 노래자랑 프로그램의 두 번째 시즌입니다.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F0%2F0%2F192%2F192909.jpg,전체 이용가,"2015 슈퍼모델 선발대회, 으라차차 전국탐험대 2, 아웃도어 쌩쑈! 헐~ 대박, 접속 2014, 액숀무비"
+OBS[26],22:00:00,OBS뉴스10 인천경기,보도,보도,30,OBS뉴스10 인천경기,,전체 이용가,정보 없음
+OBS[26],22:30:00,눈에 띄는 그녀들,보도,보도,30,눈에 띄는 그녀들,,전체 이용가,정보 없음
+OBS[26],23:00:00,OBS희망나눔 프로젝트,보도,보도,60,OBS희망나눔 프로젝트,,전체 이용가,정보 없음

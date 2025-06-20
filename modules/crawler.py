@@ -17,6 +17,20 @@ from lib.config.genre_config import genre_map
 from lib.metadata.metadata_manager import get_program_metadata
 from lib.utils.text_cleaning import clean_name
 
+def get_last_program_id_by_yesterday():
+    yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+    filename = f'./data_crawling_tmdb_gemini/{yesterday}_실시간_방영_프로그램_리스트.csv'
+    if not os.path.exists(filename):
+        print(f"[ID 초기화] 어제 파일 없음 → 오늘은 program_id 1부터 시작")
+        return 0
+    try:
+        df = pd.read_csv(filename, encoding='utf-8-sig')
+        return int(df['program_id'].max())
+    except Exception as e:
+        print(f"[ID 이어붙이기 오류] {filename} 파일 읽기 실패: {e}")
+        return 0
+
+
 class Crawler:
     def __init__(self, max_workers=5):
         self.max_workers = max_workers
@@ -28,7 +42,7 @@ class Crawler:
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         driver = webdriver.Chrome(options=options)
-        wait = WebDriverWait(driver, 10)
+        wait = WebDriverWait(driver, 13)
         return driver, wait
 
     def calculate_runtime(self, programs):
@@ -135,38 +149,57 @@ class Crawler:
             df.to_csv(f'./data_crawling_tmdb_gemini/{safe_name}_program_list.csv', index=False, encoding='utf-8-sig')
 
             print(f"[완료] {channel} → 저장 완료")
+            return final_list
         except Exception as e:
             print(f"[채널 오류] {channel} 처리 중 오류:\n{traceback.format_exc()}")
         finally:
             driver.quit()
-
+            
     def run(self):
         start_time = time.time()
         print("[크롤링 시작]")
-
+    
         channel_list = [
-            # 전국 지상파
             'KBS1[9]', 'KBS2[7]', 'MBC[11]', 'SBS[5]',
-        
-            # 종편 + 공영 + 교양
             'JTBC[15]', 'MBN[16]', '채널A[18]', 'TV조선[19]',
-            'EBS1[14]', 'EBS2[95]', 'OBS[26]',
-        
-            # 드라마/예능/영화 전문 채널
-            'tvN[3]', 'OCN[44]', '스크린[46]', '씨네프[47]', 'OCN Movies2[51]',
+            'OBS[26]', 'tvN[3]', 'OCN[44]', '스크린[46]',
+            '씨네프[47]', 'OCN Movies2[51]',
             '캐치온1[52]', '캐치온2[53]', '채널액션[54]',
             '드라마큐브[71]', 'ENA[72]', 'ENA DRAMA[73]',
-            'KBS Story[74]', 'SBS플러스[33]', 'MBC드라마넷[35]', # 필요시 추가
-        
-            # 애니메이션/키즈 채널
+            'KBS Story[74]', 'SBS플러스[33]', 'MBC드라마넷[35]',
             '투니버스[324]', '카툰네트워크[316]',
-            '애니박스[327]', '애니맥스[326]', '어린이TV[322]' # 필요시 추가
+            '애니박스[327]', '애니맥스[326]', '어린이TV[322]'
         ]
+        
+        all_data = []
 
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-            futures = [executor.submit(self.process_channel, channel) for channel in channel_list]
+            futures = {executor.submit(self.process_channel, channel): channel for channel in channel_list}
             for future in as_completed(futures):
-                future.result()
+                result = future.result()
+                if result:
+                    all_data.extend(result)
+
+        # ✅ 어제 program_id 최대값 읽기
+        last_id = get_last_program_id_by_yesterday()
+
+        # ✅ DataFrame 생성 및 정리
+        df = pd.DataFrame(all_data, columns=[
+            'channel', 'airtime', 'title', 'genre', 'subgenre',
+            'runtime', 'description', 'thumbnail', 'age_rating', 'cast'
+        ])
+        df['subgenre'] = df['subgenre'].apply(lambda x: x.replace('"', '') if isinstance(x, str) else x)
+        df = df.sort_values(by=['channel', 'airtime']).reset_index(drop=True)
+
+        # ✅ 오토 인크리먼트 ID 추가
+        df.insert(0, 'program_id', df.index + 1 + last_id)
+
+        # ✅ CSV 파일 저장
+        today_str = datetime.now().strftime('%Y-%m-%d')
+        filename = f'./data_crawling_tmdb_gemini/{today_str}_실시간_방영_프로그램_리스트.csv'
+        df.to_csv(filename, index=False, encoding='utf-8-sig')
 
         elapsed = time.time() - start_time
         print(f"[전체 완료] 모든 채널 크롤링 종료 (총 소요 시간: {int(elapsed // 60)}분 {int(elapsed % 60)}초)")
+        print(f"[저장 완료] → {filename}")
+    
