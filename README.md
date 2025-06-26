@@ -25,7 +25,7 @@ IFITV_Crawler/
 ├── modules/
 │   └── crawler.py                      # 병렬 크롤러 클래스
 ├── cache/
-│   └── metadata_cache                  # 메타데이터 캐시
+│   └── metadata_cache.csv              # 메타데이터 캐시
 ```
 
 ---
