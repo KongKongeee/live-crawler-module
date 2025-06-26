@@ -22,7 +22,7 @@ def clean_name(text):
     text = re.sub(r'〈.*?〉', '', text)
     text = re.sub(r'\<.*?\>', '', text)
 
-    text = re.sub(r'\b(수목드라마|월화드라마|일일드라마|재방송|특별판|스페셜|본방송|본|재|특집|종영|마지막회|최종화|HD|SD|NEW|다시보기)\b', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(수목드라마|월화드라마|일일드라마|주말드라마|재방송|특별판|스페셜|본방송|본|재|특집|종영|마지막회|최종화|HD|SD|NEW|다시보기)\b', '', text, flags=re.IGNORECASE)
     text = re.sub(r'\d+부', '', text)
 
     text = re.sub(r'[“”"\':\-|·,~!@#$%^&*+=]+', ' ', text)

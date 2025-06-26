@@ -1,5 +1,7 @@
 import os
 import re
+import pandas as pd
+from datetime import datetime
 from dotenv import load_dotenv
 import google.generativeai as genai
 

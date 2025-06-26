@@ -69,21 +69,21 @@ python main.py
 
 ## 🔍 메타데이터 추출 항목
 
-| 항목          | 설명                                      |
-|---------------|-------------------------------------------|
-| 프로그램명     | LG U+ 편성표 기준                         |
-| 장르          | 드라마, 예능, 영화, 애니, 보도            |
-| 서브장르      | 사용자 정의 기준에 따른 정제값             |
-| 설명          | TMDb + NAVER + Gemini 기반 요약           |
-| 출연진        | NAVER 또는 Gemini 기반 한글화된 cast       |
-| 썸네일        | TMDb 또는 NAVER 이미지 URL                |
-| 시청등급      | 숫자값 정제: `12 → 12세 이상`, `15 → 15세 이상`, `19 → 19세 이상`, 누락 시 `전체 이용가` |
+| 항목    | 설명                                                                 |
+| ----- | ------------------------------------------------------------------ |
+| 프로그램명 | LG U+ 편성표 기준                                                       |
+| 장르    | 드라마, 예능, 영화, 애니, 보도                                                |
+| 서브장르  | 사용자 정의 기준에 따른 정제값                                                  |
+| 설명    | TMDb + NAVER + Gemini 기반 요약                                        |
+| 출연진   | NAVER 또는 Gemini 기반 한글화된 cast                                       |
+| 썸네일   | TMDb 또는 NAVER 이미지 URL                                              |
+| 시청등급  | 숫자값 정제: `12 → 12세 이상`, `15 → 15세 이상`, `19 → 19세 이상`, 누락 시 `전체 이용가` |
 
 ---
 
 ## 🧠 서브장르 분류 기준
 
-- `lib/json/categories.json` 내 `"desc_keywords"` 키 아래 각 장르별 키워드 정의
+- `lib/json/categories.json` 내 "desc\_keywords" 키 아래 각 장르별 키워드 정의
 - 장르별 허용 서브장르는 `allowed_subgenres_by_genre`에서 검증
 
 ---
@@ -93,7 +93,17 @@ python main.py
 - TMDb 응답 없음 → NAVER 검색 보완
 - 썸네일, 출연진 누락 → Gemini API로 대체 추출
 - Gemini 응답값에 따른 서브장르 및 시청등급 재보정
-- program_id 오토 인크리먼트 활용하여 추가
+- program\_id 오토 인크리먼트 활용하여 추가
+
+---
+
+## 📄 캐시 파일: `metadata_cache.csv`
+
+- 프로그램 메타데이터 중복 요청을 줄이기 위한 **캐시 저장 파일**
+- `get_program_metadata()` 호출 시, 이미 수집된 프로그램명이 존재하면 해당 CSV에서 값을 불러와 재요청 생략
+- 주요 컬럼:
+  - `title`, `genre`, `sub_genre`, `desc`, `thumbnail`, `cast`, `age_rating`
+- 캐시를 통해 크롤링 속도 및 API 호출 비용 절감 효과
 
 ---
 
@@ -108,8 +118,9 @@ python main.py
 
 - Metadata 수집(TMDB, NAVER 검색, Gemini) 병렬화
 - Metadata 수집 병렬화 후 크롤링 시간 약 90분에서 약 19분으로 감소
-- 
-- 모듈화 진행(이전 크롤링 코드 : https://github.com/KongKongeee/IFITV-Crawling.git)
-- max_workers 동적 조절(이미 main.py에서 설정된 값을 Crawler 클래스에서 받아 사용할 수 있도록 구조 수정)
-- 채널마다 순차적으로 처리하였으나 채널 단위도 ThreadPoolExecutor로 묶어 2단 병렬화 진행
-- 2단 병렬화 진행 후 크롤링 시간 약 19분에서 약 4분으로 감소
+- 모듈화 진행(이전 크롤링 코드 : [https://github.com/KongKongeee/IFITV-Crawling.git](https://github.com/KongKongeee/IFITV-Crawling.git))
+- max\_workers 동적 조절(main.py에서 설정된 값을 Crawler 클래스에 전달)
+- 채널 단위도 ThreadPoolExecutor로 묶어 2단 병렬화 진행
+- 최종적으로 약 4분 이내 크롤링 완료되었으나, 서버에서 실행시 과부하 우려로 병렬실행 감소
+- metadata_cache.csv 파일 생성하여 실행시간 3분 이내로 감소 및 api실행 비용 절감
+

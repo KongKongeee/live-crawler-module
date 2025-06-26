@@ -1,24 +1,23 @@
-﻿channel,airtime,title,genre,subgenre,runtime,description,thumbnail,age_rating,cast
-MBC[11],00:05:00,태어난 김에 세계일주 4,예능,여행,295,"꼬마캐리, 미스터에그, 꼬마캐빈, 꼬마엘리가 출연하는 흥미진진한 세계 여행 예능 프로그램.",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250228_104%2F1740710107262eEFUO_JPEG%2F57_poster_image_1740710107244.jpg,전체 이용가,"꼬마캐리, 미스터에그, 꼬마캐빈, 꼬마엘리"
-MBC[11],05:00:00,MBC네트워크특선,보도,보도,60,MBC네트워크특선,,전체 이용가,정보 없음
-MBC[11],06:00:00,MBC뉴스투데이,보도,보도,25,MBC뉴스투데이,,전체 이용가,정보 없음
-MBC[11],06:25:00,MBC뉴스투데이,보도,보도,85,MBC뉴스투데이,,전체 이용가,정보 없음
-MBC[11],07:50:00,오늘N,보도,보도,60,오늘N,,전체 이용가,정보 없음
-MBC[11],08:50:00,태양을 삼킨 여자,드라마,복수,40,"피해자가 가해자로 둔갑한 세상, 하나뿐인 딸의 이름으로 재벌가에 맞선 한 여자의 처절한 복수극",https://image.tmdb.org/t/p/w500/clYtDErvK8UIeLP2vXxok3TVJKd.jpg,15세 이상,"장 신영, 서 하준, 윤 아정, 오 창석, 전 노민"
-MBC[11],09:30:00,930 MBC뉴스,보도,보도,15,930 MBC뉴스,,전체 이용가,정보 없음
-MBC[11],09:45:00,기분 좋은 날,보도,보도,60,기분 좋은 날,,전체 이용가,정보 없음
-MBC[11],10:45:00,꼬마캐리 탐구생활,애니,키즈,15,"꼬마캐리 탐구생활은 자연탐구와 같은 어려운 개념을 쉽고 재미있게 배울 수 있도록 제작된 교육 애니메이션입니다. 주인공인 ‘꼬마캐리’와 AI로봇 ‘미스터에그’가 함께 다양한 궁금증을 해결해 나가며, 흥미로운 스토리를 통해 자연스럽게 학습합니다. 호기심을 키우고 스스로 탐구하는 습관을 길러주며, 놀이하듯 즐기면서 배울 수 있는 유익한 자연탐구 애니메이션입니다.",https://image.tmdb.org/t/p/w500/gSD1VS6sJ9uAbNjJjBFh39M4j4T.jpg,전체 이용가,"꼬마캐리, 미스터에그, 꼬마캐빈, 꼬마엘리"
-MBC[11],11:00:00,키즈 펫 도감,예능,교육예능,30,"아이들이 귀여운 동물들을 만나고, 동물의 특징과 생태를 배우는 유익한 프로그램입니다. 꼬마캐리와 친구들이 함께 즐거운 시간을 보냅니다.",https://example.com/kids_pet_dogam_thumbnail.jpg,전체 이용가,"꼬마캐리, 미스터에그, 꼬마캐빈, 꼬마엘리"
-MBC[11],11:30:00,찾아가는 꾸러기교실,애니,키즈,30,"꼬마캐리, 미스터에그, 꼬마캐빈, 꼬마엘리가 함께하는 즐거운 꾸러기교실! 다양한 놀이와 교육 콘텐츠를 통해 아이들의 호기심을 자극하고 창의력을 키워주는 프로그램입니다.",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250228_104%2F1740710107262eEFUO_JPEG%2F57_poster_image_1740710107244.jpg,전체 이용가,"꼬마캐리, 미스터에그, 꼬마캐빈, 꼬마엘리"
-MBC[11],12:00:00,12 MBC뉴스,보도,보도,25,12 MBC뉴스,,전체 이용가,정보 없음
-MBC[11],12:25:00,노무사 노무진,드라마,"코미디, 판타지",90,유령 보는 노무사의 좌충우돌 노동 문제 해결기를 담은 코믹 판타지 활극,https://image.tmdb.org/t/p/w500/eERbM9lqsb405V43BzGfyYfm3TH.jpg,15세 이상,"정경호, 설인아, 차학연, 탕준상, 유선호"
-MBC[11],13:55:00,2시 뉴스 외전,보도,보도,120,2시 뉴스 외전,,전체 이용가,정보 없음
-MBC[11],15:55:00,기분 좋은 날,보도,보도,60,기분 좋은 날,,전체 이용가,정보 없음
-MBC[11],16:55:00,5시 뉴스와 경제,보도,보도,15,5시 뉴스와 경제,,전체 이용가,정보 없음
-MBC[11],17:10:00,실화탐사대,보도,보도,55,실화탐사대,,전체 이용가,정보 없음
-MBC[11],18:05:00,오늘N,보도,보도,60,오늘N,,전체 이용가,정보 없음
-MBC[11],19:05:00,태양을 삼킨 여자,드라마,복수,35,"피해자가 가해자로 둔갑한 세상, 하나뿐인 딸의 이름으로 재벌가에 맞선 한 여자의 처절한 복수극",https://image.tmdb.org/t/p/w500/clYtDErvK8UIeLP2vXxok3TVJKd.jpg,15세 이상,"장 신영, 서 하준, 윤 아정, 오 창석, 전 노민"
-MBC[11],19:40:00,MBC뉴스데스크,보도,보도,60,MBC뉴스데스크,,전체 이용가,정보 없음
-MBC[11],20:40:00,노무사 노무진,드라마,"판타지, 코미디",70,유령 보는 노무사의 좌충우돌 노동 문제 해결기를 담은 코믹 판타지 활극,https://image.tmdb.org/t/p/w500/eERbM9lqsb405V43BzGfyYfm3TH.jpg,15세 이상,"정경호, 설인아, 차학연, 탕준상, 유선호"
-MBC[11],21:50:00,노무사 노무진,드라마,"판타지, 코미디",80,유령 보는 노무사의 좌충우돌 노동 문제 해결기를 담은 코믹 판타지 활극,https://image.tmdb.org/t/p/w500/eERbM9lqsb405V43BzGfyYfm3TH.jpg,15세 이상,"정경호, 설인아, 차학연, 탕준상, 유선호"
-MBC[11],23:10:00,나 혼자 산다,예능,버라이어티,60,"대한민국 1인 가구 453만 시대! 이제는 1인 가구가 대세! 연예계 역시 1/3은 1인 가구! 기러기 아빠, 주말부부, 상경 후 고군분투중인 청년, 독신남 등 각기 다른 이유로 싱글족이 된 스타들! 당당한 1인 가구의 싱글라이프는 과연 어떤 것일까? 1인 가구가 트렌드가 된 현 시점에서 프로그램을 통해 사회적 공감대를 형성해본다.",https://image.tmdb.org/t/p/w500/bq3Emv3pJLUyHvwGqiAXRwJvAmL.jpg,15세 이상,"박나래, 전현무, Key, 화사, Code Kunst"
+﻿channel,airtime,title,episode,genre,subgenre,runtime,description,thumbnail,age_rating,cast
+MBC[11],01:00:00,노무사 노무진,10회,드라마,"판타지, 코미디",80,유령 보는 노무사의 좌충우돌 노동 문제 해결기를 담은 코믹 판타지 활극,https://image.tmdb.org/t/p/w500/eERbM9lqsb405V43BzGfyYfm3TH.jpg,15세 이상,"정경호, 설인아, 차학연, 탕준상, 유선호"
+MBC[11],02:20:00,신비한TV서프라이즈,,예능,교양,75,"세계 불가사의, 역사적 사건, 미스터리 등을 재연 드라마 형식으로 다루는 프로그램",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F65%2F88%2F81%2F57_658881_poster_image_1477302701410.jpg,12세 이상,"손윤상, 박재현, 김하영, 김난영, 정국빈"
+MBC[11],03:35:00,방송 시간이 아닙니다,,보도,보도,85,방송 시간이 아닙니다,,전체 이용가,정보 없음
+MBC[11],05:00:00,오늘N,,예능,교양,60,"""생방송 오늘 아침""과 자매 프로그램으로서 다양한 정보, 생활의 지혜, 의식주, 대중문화, 사회 이슈의 현장을 생동감 있게 구성한 프로그램",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240710_51%2F1720592842320m2ohQ_JPEG%2F154973f67e8fe5a8fb77288b3e36b98d.jpg,12세 이상,"이휘준, 박소영"
+MBC[11],06:00:00,기분 좋은 날,,예능,교양,60,"화려함 뒤에 숨겨진 스타들의 진솔한 이야기와 이색 명소에서 펼쳐지는 스타들의 특별한 체험. 그리고 유쾌한 강의, 기분 좋은 정보! 웃음과 눈물이 함께하는 명강의와 생활에 유익한 다양한 정보가 함께 하는 프로그램",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250623_8%2F1750639190639pQxHP_JPEG%2F57_659900_poster_image_1750639190632.jpg,12세 이상,"서인, 이진, 김한석"
+MBC[11],07:00:00,MBC뉴스,,보도,보도,10,MBC뉴스,,전체 이용가,정보 없음
+MBC[11],07:10:00,시크릿 쥬쥬 별의 보석 2,,애니,키즈,15,요정들이 펼치는 마법과 우정 이야기를 다룬 애니메이션입니다.,https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMjlfMjY5%2FMDAxNjQzNDk4NDk2OTk4.vS0yK504W-dC-7-h569XjM4H2rL-x3Wz4wGk9rUq7Tgg.99eWf0Gq6bV-t3lF37-vF3x7F7F4W28X0o_661Yogvsg.JPEG.wjddyd4708%2F%25EC%258B%259C%25ED%2581%25AC%25EB%25A6%25BF%25EC%25A5%25B4%25EC%25A5%2590_%25EB%25B3%2584%25EC%259D%2598_%25EB%25B3%25B4%25EC%2584%259D2_1.jpg&type=sc960_832,전체 이용가,정보 없음
+MBC[11],07:25:00,주니토니 이야기,,애니,키즈,15,"쌍둥이 꼬마 마법사 주니, 토니와 함께 동물과 곤충, 직업, 몸 등에 관한 다양한 지식을 배워보는 시간. 공부가 신나는 음악 모험으로 바뀐답니다!",https://image.tmdb.org/t/p/w500/s97LxQaGCfpSrxyf0FOKWYgoln9.jpg,전체 이용가,"주니, 토니"
+MBC[11],07:40:00,앙코르MBC다큐프라임,,보도,보도,55,앙코르MBC다큐프라임,,전체 이용가,정보 없음
+MBC[11],08:35:00,엄마를 부탁해,,보도,보도,55,엄마를 부탁해,,전체 이용가,정보 없음
+MBC[11],09:30:00,태어난 김에 세계일주 4,,예능,여행,70,"기안84, 빠니보틀, 이시언, 덱스, 장도연이 출연하는 '태어난 김에 세계일주' 시리즈의 네 번째 시즌. 새로운 여행지에서 펼쳐지는 예측불가한 모험과 웃음을 선사한다.",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250424_232%2F1745460329854DY49e_JPEG%2Ff56606ab33529deded821ac62df1ebf1.jpg,15세 이상,"기안84, 빠니보틀, 이시언, 덱스, 장도연"
+MBC[11],10:40:00,신비한TV서프라이즈,,예능,버라이어티,75,믿기 어려운 실화들을 재연 드라마 형식으로 보여주는 프로그램,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fkeypage%2Fimage%2Fdss%2F57%2F65%2F88%2F81%2F57_658881_poster_image_1477302701410.jpg,15세 이상,"손윤상, 박재현, 김하영, 김난영, 정국빈"
+MBC[11],11:55:00,MBC뉴스,,보도,보도,10,MBC뉴스,,전체 이용가,정보 없음
+MBC[11],12:05:00,출발 비디오 여행,,예능,코미디,75,《출발! 비디오 여행》은 MBC TV에서 매주 일요일 낮 12시 5분에 방송하는 텔레비전 프로그램이다. 영화를 소개하거나 영화 관련 내용으로 한다.,https://image.tmdb.org/t/p/w500/7wiuE5wat9oWM9nloQeaPsfgbCv.jpg,전체 이용가,"서인, 김초롱, 이철용, 김경식, 김재우"
+MBC[11],13:20:00,전지적 참견 시점,,예능,버라이어티,110,"""당신의 인생에 참견해드립니다!"" 매니저들의 거침없는 제보로 공개되는 스타들의 리얼 일상! 그리고 시작되는 다양한 '참견 고수'들의 시시콜콜한 참견!",https://image.tmdb.org/t/p/w500/oRoGuuYiyQmxc1fU5oV5dPKlnAz.jpg,15세 이상,"전현무, 송은이, 유병재, 양세형, 이영자"
+MBC[11],15:10:00,노무사 노무진,10회,드라마,"판타지, 코미디",80,유령 보는 노무사의 좌충우돌 노동 문제 해결기를 담은 코믹 판타지 활극,https://image.tmdb.org/t/p/w500/eERbM9lqsb405V43BzGfyYfm3TH.jpg,15세 이상,"정경호, 설인아, 차학연, 탕준상, 유선호"
+MBC[11],16:30:00,놀면 뭐하니?,,예능,코미디,85,"평소 스케줄 없는 날 ""놀면 뭐하니?""라고 말하는 유재석에게 카메라를 맡기면서 시작된 릴레이 카메라. 수많은 사람을 거치며 카메라에 담긴 의외의 인물들과 다양한 이야기를 담은 프로그램",https://image.tmdb.org/t/p/w500/10dL6iCqPIaAoDq1CTBOrOmbsmo.jpg,15세 이상,유재석
+MBC[11],17:55:00,복면가왕 10주년,,예능,음악예능,120,10주년을 맞이하여 더욱 강력해진 무대와 반전 가득한 복면들의 향연!,정보 없음,12세 이상,정보 없음
+MBC[11],19:55:00,MBC뉴스데스크,,보도,보도,35,MBC뉴스데스크,,전체 이용가,정보 없음
+MBC[11],20:30:00,스트레이트,,보도,보도,40,스트레이트,,전체 이용가,정보 없음
+MBC[11],21:10:00,태어난 김에 세계일주 4,,예능,여행,110,"기안84, 빠니보틀, 이시언, 덱스, 장도연이 출연하는 '태어난 김에 세계일주' 시리즈의 네 번째 시즌. 새로운 여행지에서 펼쳐지는 예측불가한 모험과 웃음을 선사한다.",https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250424_232%2F1745460329854DY49e_JPEG%2Ff56606ab33529deded821ac62df1ebf1.jpg,15세 이상,"기안84, 빠니보틀, 이시언, 덱스, 장도연"
+MBC[11],23:00:00,심야괴담회 5,,예능,토크쇼,60,MC들과 게스트들이 기괴하고 섬뜩한 실화 괴담을 소개하고 이야기를 나누는 프로그램.,https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20250625_262%2F1750812859002Tl5o8_JPEG%2F2800993a993aafca0d0bd5adca94f3cc.jpg,15세 이상,"김구라, 김숙, 김호영, 김아영"

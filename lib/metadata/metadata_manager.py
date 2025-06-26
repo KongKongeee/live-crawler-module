@@ -56,7 +56,7 @@ def validate_and_fix_subgenre(original_genre, sub_genre, desc, genre_text):
 
     return ''
 
-def get_program_metadata(program_name, driver, original_genre):
+def get_program_metadata(program_name, driver, original_genre, channel):
     name = clean_name(program_name)
 
     # 예외 처리 테이블
@@ -75,16 +75,22 @@ def get_program_metadata(program_name, driver, original_genre):
     if name in program_exceptions:
         meta = program_exceptions[name]
         genre = meta.get('genre', original_genre)
-        return genre, meta['sub_genre'], meta['desc'], meta['thumbnail'], meta['age_rating'], meta['cast']
+        return genre, meta['sub_genre'], meta['desc'], meta['thumbnail'], meta['age_rating'], meta['cast'], name
 
-    # 스포츠/보도 예외
+    # 스포츠 예외
     if original_genre == '스포츠':
-        return '스포츠', '스포츠', program_name, '', '전체 이용가', '정보 없음'
+        return '스포츠', '스포츠', program_name, '', '전체 이용가', '정보 없음', program_name
+    
+    # 보도 예외
     if original_genre == '보도':
-        return '보도', '보도', program_name, '', '전체 이용가', '정보 없음'
+        return '보도', '보도', program_name, '', '전체 이용가', '정보 없음', program_name
 
-    # TMDb 정보 가져오기
-    desc, thumbnail, sub_genre, age_rating, cast = get_program_info_from_tmdb(name, original_genre)
+    # ✅ TMDb 정보 가져오기 (오류 출력 추가)
+    try:
+        desc, thumbnail, sub_genre, age_rating, cast = get_program_info_from_tmdb(name, original_genre, channel)
+    except Exception as e:
+        print(f"[TMDb 오류] 프로그램명: '{program_name}' → {e}")
+        desc, thumbnail, sub_genre, age_rating, cast = '', '', '', '', '정보 없음'
 
     # NAVER 보완
     genre_text, web_thumb = get_info_from_web_search(driver, name)
@@ -134,16 +140,7 @@ def get_program_metadata(program_name, driver, original_genre):
             program_name, original_genre, desc, sub_genre, thumbnail, age_rating, cast, allowed_subgenres_by_genre
         )
         original_genre = genre_out
-    
-        # ✅ Gemini 응답 로깅
-        print(f"[Gemini 응답] {program_name}")
-        print(f"  → genre: {genre_out}")
-        print(f"  → subgenre: {sub_genre}")
-        print(f"  → desc: {desc[:50]}...")
-        print(f"  → thumbnail: {'있음' if thumbnail else '없음'}")
-        print(f"  → age_rating: {age_rating}")
-        print(f"  → cast: {cast}")
-    
+       
         # ✅ 보완 후 재검증
         sub_genre = validate_and_fix_subgenre(original_genre, sub_genre, desc, genre_text)
         
@@ -151,8 +148,9 @@ def get_program_metadata(program_name, driver, original_genre):
     desc = re.sub(r'\s+', ' ', desc or '').strip()
     age_rating = age_rating.strip().upper() if age_rating else '전체 이용가'
     if age_rating in ['12']: age_rating = '12세 이상'
+    elif age_rating in ['7']: age_rating = '7세 이상'
     elif age_rating in ['15']: age_rating = '15세 이상'
-    elif age_rating in ['18', '19']: age_rating = '19세 이상'
+    elif age_rating in ['18', '19', '19+']: age_rating = '19세 이상'
     elif age_rating in ['ALL', '전체', '전체 이용가']: age_rating = '전체 이용가'
 
     if original_genre == '다큐':
@@ -162,4 +160,4 @@ def get_program_metadata(program_name, driver, original_genre):
     if original_genre == '교육':
         original_genre, sub_genre = '예능', '교육예능'
 
-    return original_genre, sub_genre, desc, thumbnail, age_rating, cast
+    return original_genre, sub_genre, desc, thumbnail, age_rating, cast, program_name

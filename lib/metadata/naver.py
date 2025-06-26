@@ -28,7 +28,8 @@ def get_info_from_web_search(driver, name):
 
 def get_cast_list_from_naver(driver, program_title):
     try:
-        query = f"{program_title} 출연진"
+        cleaned = clean_name(program_title)
+        query = f"{cleaned} 출연진"
         url = f"https://search.naver.com/search.naver?query={quote(query)}"
         driver.get(url)
         time.sleep(1.5)

@@ -12,7 +12,7 @@ def clean_title_for_tmdb(title):
     title = re.sub(r'\s+', ' ', title)
     return title.strip()
 
-def get_program_info_from_tmdb(title, original_genre):
+def get_program_info_from_tmdb(title, original_genre, channel=None):
     api_key = os.getenv("TMDB_API_KEY")
     image_base_url = "https://image.tmdb.org/t/p/w500"
 
@@ -91,7 +91,8 @@ def get_program_info_from_tmdb(title, original_genre):
             return desc, thumbnail, sub_genre, age_rating, cast
 
         except Exception as e:
-            print(f"[TMDb 오류 - {content_type.upper()}] {title}: {e}")
+            print(f"[TMDb 오류 - {content_type.upper()}] '{title}' (채널: {channel}, 장르: {original_genre}) → {e}")
             continue
+
 
     return '', '', '', '', ''
