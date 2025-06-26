@@ -15,16 +15,17 @@ IFITV_Crawler/
 │   │   └── genre_config.py             # 장르/서브장르/키워드 설정 로딩
 │   ├── json/
 │   │   └── categories.json             # desc_keywords가 포함된 JSON 구조
-│   └── utils/
-│       └── text_cleaning.py            # 프로그램명 정제 등 텍스트 유틸
-├── modules/
-│   └── crawler.py                      # 병렬 크롤러 클래스
-├── lib/
+│   ├── utils/
+│   │    └── text_cleaning.py            # 프로그램명 정제 등 텍스트 유틸
 │   └── metadata/
 │       ├── tmdb.py                     # TMDb 기반 메타데이터 추출
 │       ├── naver.py                    # NAVER 웹/이미지 검색 및 출연진 추출
-│       └── gemini.py                   # Google Gemini로 결측 메타데이터 보완
-├── data_crawling_tmdb_gemini/         # 결과 CSV 저장 디렉토리
+│       ├── gemini.py                   # Google Gemini로 결측 메타데이터 보완
+│       └── metadata_manager.py         # 메타데이터 추출 결합
+├── modules/
+│   └── crawler.py                      # 병렬 크롤러 클래스
+├── cache/
+│   └── metadata_cache                  # 메타데이터 캐시
 ```
 
 ---
