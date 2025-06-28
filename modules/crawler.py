@@ -221,7 +221,7 @@ class Crawler:
             # 날짜 탭 클릭
             for attempt in range(2):
                 try:
-                    target_date = datetime.now() + timedelta(days=3)
+                    target_date = datetime.now() + timedelta(days=2)
                     month_day = f"{target_date.month}월 {target_date.day}일"
                     day_of_week = ['(월)', '(화)', '(수)', '(목)', '(금)', '(토)', '(일)'][target_date.weekday()]
                     date_label = f"{month_day} {day_of_week}"
@@ -317,7 +317,7 @@ class Crawler:
         print("[크롤링 시작]")
     
         today_str = datetime.now().strftime('%Y-%m-%d')
-        target_date_str = (datetime.now() + timedelta(days=3)).strftime('%Y-%m-%d')
+        target_date_str = (datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d')
         filename = f'./data_crawling_tmdb_gemini/{target_date_str}_실시간_방영_프로그램_리스트.csv'
         cache_path = './cache/metadata_cache.csv'
     
