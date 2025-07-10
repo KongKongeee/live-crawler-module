@@ -86,9 +86,9 @@ def get_program_info_from_tmdb(title, original_genre, channel=None):
                 fallback_names = [genre_name_to_kor.get(g.get("name"), '') for g in genre_data]
                 subgenres = [name for name in fallback_names if name]
 
-            sub_genre = ', '.join(subgenres).strip()
+            subgenre = ', '.join(subgenres).strip()
 
-            return desc, thumbnail, sub_genre, age_rating, cast
+            return desc, thumbnail, subgenre, age_rating, cast
 
         except Exception as e:
             print(f"[TMDb 오류 - {content_type.upper()}] '{title}' (채널: {channel}, 장르: {original_genre}) → {e}")

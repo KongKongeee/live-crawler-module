@@ -3,6 +3,7 @@ import re
 import time
 import traceback
 import pandas as pd
+import numpy as np
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
@@ -33,11 +34,13 @@ def get_last_program_id_by_yesterday():
 
 # options.add_argument('--headless')
 class Crawler:
-    
-    def __init__(self, max_workers=5):
+
+    def __init__(self, max_workers=5, target_day_offset=0):
         self.max_workers = max_workers
+        self.target_day_offset = target_day_offset  # ✅ 기준 날짜 offset
         self.cache_lock = Lock()
         os.makedirs('./data_crawling_tmdb_gemini', exist_ok=True)
+
 
     def setup_driver(self):
         options = Options()
@@ -68,7 +71,7 @@ class Crawler:
             return pd.read_csv(path)
         else:
             return pd.DataFrame(columns=[
-                'title', 'genre', 'sub_genre', 'description', 'thumbnail', 'age_rating', 'cast'
+                'title', 'genre', 'subgenre', 'description', 'thumbnail', 'age_rating', 'cast'
             ])
     
     def fetch_metadata(self, driver, channel, airtime, title, genre, runtime, metadata_cache_df):
@@ -79,19 +82,19 @@ class Crawler:
                 row = cached.iloc[0]
                 return [
                     channel, airtime, title,
-                    row['genre'], row['sub_genre'], runtime,
+                    row['genre'], row['subgenre'], runtime,
                     row['description'], row['thumbnail'],
                     row['age_rating'], row['cast']
                 ]
     
             # ✅ 2. 캐시에 없다면 외부 메타데이터 수집
-            genre_out, sub_genre, desc, thumbnail, age_rating, cast, _ = get_program_metadata(title, driver, genre, channel)
+            genre_out, subgenre, desc, thumbnail, age_rating, cast, _ = get_program_metadata(title, driver, genre, channel)
     
             # ✅ 3. 캐시 업데이트 (동시성 고려)
             new_row = {
                 'title': title,
                 'genre': genre_out,
-                'sub_genre': sub_genre,
+                'subgenre': subgenre,
                 'description': desc,
                 'thumbnail': thumbnail,
                 'age_rating': age_rating,
@@ -101,7 +104,7 @@ class Crawler:
             # ✅ 4. 결과 반환
             return [
                 channel, airtime, title,
-                genre_out, sub_genre, runtime,
+                genre_out, subgenre, runtime,
                 desc, thumbnail, age_rating, cast
             ]
     
@@ -143,6 +146,7 @@ class Crawler:
                 print(f"❌ {i}번째 `<` 버튼 (#_uid_233) 클릭 중 오류:", e)
                 time.sleep(1)
 
+
     def crawl_all_channels(self, channel_list, metadata_cache_df):
         all_data = []
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
@@ -161,12 +165,15 @@ class Crawler:
                     traceback.print_exc()
         return all_data
 
+
     def save_final_program_data(self, all_data, filename):
         last_id = get_last_program_id_by_yesterday()
         df = pd.DataFrame(all_data, columns=[
             'channel', 'airtime', 'title', 'episode', 'genre', 'subgenre',
             'runtime', 'description', 'thumbnail', 'age_rating', 'cast'
         ])
+        
+        df.replace("정보 없음", np.nan, inplace=True)
         df['subgenre'] = df['subgenre'].apply(lambda x: x.replace('"', '') if isinstance(x, str) else x)
         df = df.sort_values(by=['channel', 'airtime']).reset_index(drop=True)
         df.insert(0, 'program_id', df.index + 1 + last_id)
@@ -174,25 +181,72 @@ class Crawler:
         print(f"[저장 완료] → {filename}")
         return df
 
+
+
     def update_metadata_cache(self, all_data, metadata_cache_df, cache_path):
-        new_rows = [{
-            'title': row[2],
-            'genre': row[4],
-            'sub_genre': row[5],
-            'description': row[7],
-            'thumbnail': row[8],
-            'age_rating': row[9],
-            'cast': row[10]
-        } for row in all_data]
+        new_rows = []
+    
+        for row in all_data:
+            title = row[2]
+            title_lower = title.strip().lower()
+    
+            # ✅ '클래스 e'로 정확히 시작하는 경우에만 예외 처리
+            if '클래스e' in title_lower or re.match(r'^클래스\s*e\b', title_lower):
+                genre = '예능'
+                subgenre = '교양'
+                description = '세상을 살아가기 위한 가장 간편하고 지적인 방법'
+                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20201008_216%2F1602147482205904L6_JPEG%2F57_poster_image_1602147482169.jpg'
+                age_rating = '전체 이용가'
+                
+            elif 'EBS평생학교' in title:
+                genre = '예능'
+                subgenre = '교양'
+                description = '고령화 사회로 진입하면서 교육 콘텐츠로부터 소외받는 시니어 층을 위해 평생교육법을 바탕으로 7개 주제로 나눈 신개념 평생교육 프로그램'
+                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20230403_68%2F1680510606322Wo3DU_JPEG%2F57_31285970_poster_image_1680510606307.jpg'
+                age_rating = '전체 이용가'
+            
+            elif '버섯도리 패밀리 대작전 3' in title:
+                genre = '애니'
+                subgenre = '키즈'
+                descrpition = '버섯도리 가족에게 새로운 사건이 발생했다! 수상한 용의자들! 똥촉이 난무하는 추리! 미궁에 빠지는 사건! 과연 범인은 누구?! 버섯도리와 함께 이번 사건도 해결!'
+                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240419_176%2F1713497424475OzSAv_JPEG%2F57_poster_image_1713497424444.jpg'
+                age_rating = '12세 이상'
+            
+            elif '위대한 수업 그레이트 마인즈' in title:
+                genre = '예능'
+                subgenre = '교양'
+                description = '세계적 지적 유산들을 성실히 기록하며, 한국 사회에 의미 있는 담론을 형성하는 프로그램'
+                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240926_216%2F1727336972138NxBJg_JPEG%2F57_poster_image_1727336972119.jpg'
+                age_rating = '전체 이용가'
+                
+            else:
+                genre = row[4]
+                subgenre = row[5]
+                description = row[7]
+                thumbnail = row[8]
+                age_rating =  row[9]
+    
+            new_rows.append({
+                'title': title,
+                'genre': genre,
+                'subgenre': subgenre,
+                'description': description,
+                'thumbnail': thumbnail,
+                'age_rating': age_rating,
+                'cast': row[10]
+            })
     
         new_cache_df = pd.DataFrame(new_rows)
+        before_count = len(metadata_cache_df)
+    
         combined = pd.concat([metadata_cache_df, new_cache_df], ignore_index=True)
         combined = combined.drop_duplicates(subset=['title'], keep='last')
+    
+        after_count = len(combined)
+        added_count = after_count - before_count
+    
         combined.to_csv(cache_path, index=False, encoding='utf-8-sig')
-        print(f"[캐시 갱신 완료] → {cache_path}")
-
-        
-
+        print(f"[캐시 갱신 완료] → {cache_path} (신규 추가: {added_count}개)")
 
 
     def process_channel_with_cache(self, channel, metadata_cache_df):
@@ -216,12 +270,12 @@ class Crawler:
             channel_xpath = f'//a[contains(text(), "{channel}")]'
             wait.until(EC.element_to_be_clickable((By.XPATH, channel_xpath))).click()
             time.sleep(2)
-    
+            
     
             # 날짜 탭 클릭
             for attempt in range(2):
                 try:
-                    target_date = datetime.now() + timedelta(days=2)
+                    target_date = datetime.now() + timedelta(days=self.target_day_offset)
                     month_day = f"{target_date.month}월 {target_date.day}일"
                     day_of_week = ['(월)', '(화)', '(수)', '(목)', '(금)', '(토)', '(일)'][target_date.weekday()]
                     date_label = f"{month_day} {day_of_week}"
@@ -316,9 +370,11 @@ class Crawler:
         start_time = time.time()
         print("[크롤링 시작]")
     
-        today_str = datetime.now().strftime('%Y-%m-%d')
-        target_date_str = (datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d')
+        # run() 내 날짜 설정
+        target_date = datetime.now() + timedelta(days=self.target_day_offset)
+        target_date_str = target_date.strftime('%Y-%m-%d')
         filename = f'./data_crawling_tmdb_gemini/{target_date_str}_실시간_방영_프로그램_리스트.csv'
+
         cache_path = './cache/metadata_cache.csv'
     
         channel_list = [
@@ -335,7 +391,7 @@ class Crawler:
     
         # ✅ 캐시 로딩
         metadata_cache_df = pd.read_csv(cache_path) if os.path.exists(cache_path) else pd.DataFrame(columns=[
-            'title', 'genre', 'sub_genre', 'description',
+            'title', 'genre', 'subgenre', 'description',
             'thumbnail', 'age_rating', 'cast'
         ])
     
