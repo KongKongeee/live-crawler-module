@@ -54,8 +54,6 @@ live_crawler/
     `.env` 파일을 생성하고 아래와 같이 API 키를 입력합니다.
     ```
     TMDB_API_KEY="YOUR_TMDB_API_KEY"
-    NAVER_CLIENT_ID="YOUR_NAVER_CLIENT_ID"
-    NAVER_CLIENT_SECRET="YOUR_NAVER_CLIENT_SECRET"
     GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
     ```
 
