@@ -184,48 +184,36 @@ class Crawler:
 
 
     def update_metadata_cache(self, all_data, metadata_cache_df, cache_path):
+        # ✅ 예외 메타데이터 로딩
+        with open('./lib/config/metadata_exceptions.json', 'r', encoding='utf-8') as f:
+            metadata_exceptions = json.load(f)
+
+        def match_exception(title):
+            title_lower = title.strip().lower()
+            for entry in metadata_exceptions:
+                for keyword in entry['title_keywords']:
+                    if keyword.lower() in title_lower:
+                        return entry
+            return None
+
         new_rows = []
-    
         for row in all_data:
             title = row[2]
-            title_lower = title.strip().lower()
-    
-            # ✅ '클래스 e'로 정확히 시작하는 경우에만 예외 처리
-            if '클래스e' in title_lower or re.match(r'^클래스\s*e\b', title_lower):
-                genre = '예능'
-                subgenre = '교양'
-                description = '세상을 살아가기 위한 가장 간편하고 지적인 방법'
-                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20201008_216%2F1602147482205904L6_JPEG%2F57_poster_image_1602147482169.jpg'
-                age_rating = '전체 이용가'
-                
-            elif 'EBS평생학교' in title:
-                genre = '예능'
-                subgenre = '교양'
-                description = '고령화 사회로 진입하면서 교육 콘텐츠로부터 소외받는 시니어 층을 위해 평생교육법을 바탕으로 7개 주제로 나눈 신개념 평생교육 프로그램'
-                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20230403_68%2F1680510606322Wo3DU_JPEG%2F57_31285970_poster_image_1680510606307.jpg'
-                age_rating = '전체 이용가'
-            
-            elif '버섯도리 패밀리 대작전 3' in title:
-                genre = '애니'
-                subgenre = '키즈'
-                descrpition = '버섯도리 가족에게 새로운 사건이 발생했다! 수상한 용의자들! 똥촉이 난무하는 추리! 미궁에 빠지는 사건! 과연 범인은 누구?! 버섯도리와 함께 이번 사건도 해결!'
-                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240419_176%2F1713497424475OzSAv_JPEG%2F57_poster_image_1713497424444.jpg'
-                age_rating = '12세 이상'
-            
-            elif '위대한 수업 그레이트 마인즈' in title:
-                genre = '예능'
-                subgenre = '교양'
-                description = '세계적 지적 유산들을 성실히 기록하며, 한국 사회에 의미 있는 담론을 형성하는 프로그램'
-                thumbnail = 'https://search.pstatic.net/common?type=f&size=176x244&quality=100&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20240926_216%2F1727336972138NxBJg_JPEG%2F57_poster_image_1727336972119.jpg'
-                age_rating = '전체 이용가'
-                
+            matched = match_exception(title)
+
+            if matched:
+                genre = matched['genre']
+                subgenre = matched['subgenre']
+                description = matched['description']
+                thumbnail = matched['thumbnail']
+                age_rating = matched['age_rating']
             else:
                 genre = row[4]
                 subgenre = row[5]
                 description = row[7]
                 thumbnail = row[8]
-                age_rating =  row[9]
-    
+                age_rating = row[9]
+
             new_rows.append({
                 'title': title,
                 'genre': genre,
@@ -235,16 +223,16 @@ class Crawler:
                 'age_rating': age_rating,
                 'cast': row[10]
             })
-    
+
         new_cache_df = pd.DataFrame(new_rows)
         before_count = len(metadata_cache_df)
-    
+
         combined = pd.concat([metadata_cache_df, new_cache_df], ignore_index=True)
         combined = combined.drop_duplicates(subset=['title'], keep='last')
-    
+
         after_count = len(combined)
         added_count = after_count - before_count
-    
+
         combined.to_csv(cache_path, index=False, encoding='utf-8-sig')
         print(f"[캐시 갱신 완료] → {cache_path} (신규 추가: {added_count}개)")
 
@@ -373,9 +361,9 @@ class Crawler:
         # run() 내 날짜 설정
         target_date = datetime.now() + timedelta(days=self.target_day_offset)
         target_date_str = target_date.strftime('%Y-%m-%d')
-        filename = f'./data_crawling_tmdb_gemini/{target_date_str}_실시간_방영_프로그램_리스트.csv'
+        filename = f'./ifitv_crawler/data_crawling_tmdb_gemini/{target_date_str}_실시간_방영_프로그램_리스트.csv'
 
-        cache_path = './cache/metadata_cache.csv'
+        cache_path = './ifitv_crawler/cache/metadata_cache.csv'
     
         channel_list = [
             '투니버스[324]', '어린이TV[322]',
