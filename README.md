@@ -1,5 +1,5 @@
 
-# 📺 실시간 방송 편성표 크롤러 (Live TV Schedule Crawler)
+# 📺 LG U+ 실시간 방송 편성표 크롤러 (LG U+ Live TV Schedule Crawler)
 
 ## 📖 프로젝트 개요
 
